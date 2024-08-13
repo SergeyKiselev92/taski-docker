@@ -162,19 +162,19 @@ jobs:
       uses: appleboy/scp-action@master
     # Передаём параметры для action appleboy/scp-action:
       with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USER }}
-        key: ${{ secrets.SSH_KEY }}
-        passphrase: ${{ secrets.SSH_PASSPHRASE }}
+        host: 89.169.167.91
+        username: yc-user
+        key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCaijsDfm6rC05vR3mj74PhhngTCuPPRhPi5HlH7YE/UtIGTQGYHI1QEHO298QqkhuhXrXNARR3feET5RODmbZAmSSIm/28ZebYs/yGjHxBsHQL7K9u8ua/dt3TXlr8/o+WPwvzubc9i02CyrIIUD//yPnxsiDpBYbsRB+747XFSkiinNKgxB/xcmibXJwlrNaVf9xLCuyjPYCKqPZ29mq45b3DR5rJ3e9+enbCVUisvZ9AYJs9X4bXzo5TawqyC/FtC18GFvTyWmP9oaXeJEhE5egH2t/UHIPHEa6KITHhqszof6C3OjM0LNb9lvitsBik/HTI9r7HU6VJWu33KG4a1NJmnuu5C6ajQAAldKsCJGSAcBoaPl04ADQ0XUrCe2pgCwIhuNQRWShQFFlhI5iH2tYe6InwNqZ/evwpTwGqB7dJx0SxbseHZdlZhkrOjbne0biBB3fMc+2Qz+QEFXGk4oPasBXjDZllXP9Uj/dlo7jj6W53kiA5yy88dn1Uzgs= yc-user@epdn77hbevcubj67p8ol
+        passphrase: JlOv3bJ-5z
         source: "docker-compose.production.yml"
         target: "taski"
     - name: Executing remote ssh commands to deploy
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USER }}
-        key: ${{ secrets.SSH_KEY }}
-        passphrase: ${{ secrets.SSH_PASSPHRASE }}
+        host: 89.169.167.91
+        username: yc-user
+        key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCaijsDfm6rC05vR3mj74PhhngTCuPPRhPi5HlH7YE/UtIGTQGYHI1QEHO298QqkhuhXrXNARR3feET5RODmbZAmSSIm/28ZebYs/yGjHxBsHQL7K9u8ua/dt3TXlr8/o+WPwvzubc9i02CyrIIUD//yPnxsiDpBYbsRB+747XFSkiinNKgxB/xcmibXJwlrNaVf9xLCuyjPYCKqPZ29mq45b3DR5rJ3e9+enbCVUisvZ9AYJs9X4bXzo5TawqyC/FtC18GFvTyWmP9oaXeJEhE5egH2t/UHIPHEa6KITHhqszof6C3OjM0LNb9lvitsBik/HTI9r7HU6VJWu33KG4a1NJmnuu5C6ajQAAldKsCJGSAcBoaPl04ADQ0XUrCe2pgCwIhuNQRWShQFFlhI5iH2tYe6InwNqZ/evwpTwGqB7dJx0SxbseHZdlZhkrOjbne0biBB3fMc+2Qz+QEFXGk4oPasBXjDZllXP9Uj/dlo7jj6W53kiA5yy88dn1Uzgs= yc-user@epdn77hbevcubj67p8ol
+        passphrase: JlOv3bJ-5z
         # Параметр script передаёт в action appleboy/ssh-action команды,
         # которые нужно выполнить на сервере, 
         # с которым установлено соединение
