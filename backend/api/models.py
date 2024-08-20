@@ -1,5 +1,5 @@
 """Файл с моделями приложения."""
-rom django.db import models
+from django.db import models
 
 
 class Task(models.Model):
